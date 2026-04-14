@@ -1,0 +1,22 @@
+# Dockerfile
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PROPHET_DISABLE_STAN_VERSION_CHECK=1
+
+# System deps needed for Prophet/cmdstan build
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential gcc g++ make git curl \
+ && rm -rf /var/lib/apt/lists/*
+
+# Python deps
+RUN pip install --no-cache-dir \
+    numpy pandas boto3 holidays==0.41 prophet==1.1.5
+
+# SageMaker processing dirs
+RUN mkdir -p /opt/ml/processing/{input,output,code}
+COPY processing_script2.py /opt/ml/processing/code/processing_script2.py
+
+# Default entrypoint for Processing
+ENTRYPOINT ["python", "/opt/ml/processing/code/processing_script2.py"]
