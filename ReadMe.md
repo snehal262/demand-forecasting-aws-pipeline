@@ -18,7 +18,7 @@ intervention required.
 
 ## Pipeline Architecture
 
-![AWS Pipeline](images/AWS_Pipeline.png)
+![AWS Pipeline](Images/AWS_Pipeline.png)
 
 ---
 
@@ -80,7 +80,7 @@ intervention required.
 
 ## Research Poster
 
-[View Full Research Poster](poster.pdf)
+[View Full Research Poster](Images/poster.pdf)
 
 ---
 
