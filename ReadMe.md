@@ -84,21 +84,3 @@ intervention required.
 
 ---
 
-## Future Work
-
-- Deeper models — LSTM, XGBoost
-- RAG-based chatbot for inventory queries
-- Direct ERP integration for automated data extraction
-
----
-
-## Certifications
-
-- AWS Certified Machine Learning Engineering Associate (2025)
-- AWS Certified AI Practitioner (2025)
-- AWS Certified Cloud Practitioner (2025)
-
----
-
-_University of Waterloo — BASc Mechanical Engineering (2023)_  
-_Middlesex University Dubai — MSc Data Science (2026)_
